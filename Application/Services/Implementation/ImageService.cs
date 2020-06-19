@@ -1,7 +1,7 @@
 ﻿using Application.Services.Interface;
-using AutoMapper.Configuration;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.IO;
