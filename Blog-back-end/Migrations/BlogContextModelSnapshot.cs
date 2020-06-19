@@ -89,6 +89,23 @@ namespace Blog_back_end.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Tag");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            TagName = "Comedy"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            TagName = "science"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            TagName = "Films"
+                        });
                 });
 
             modelBuilder.Entity("Infrastructure.Models.User", b =>
@@ -114,6 +131,16 @@ namespace Blog_back_end.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Email = "vitaliy2001rudenko",
+                            FirstName = "vitaliy",
+                            LastName = "Rudenko",
+                            Password = "usedrugs3"
+                        });
                 });
 
             modelBuilder.Entity("Infrastructure.Models.Post", b =>

@@ -39,10 +39,11 @@ namespace Blog_back_end
         {
             services.AddControllers();
             string localConnection = Configuration.GetConnectionString("DefaultConnection");
+            string azureConnection = Configuration.GetConnectionString("AzureConnection");
             // Please download appsettings.json for connecting to Azure DB
 
             services.AddDbContext<Infrastructure.BlogContext>(options =>
-                options.UseSqlServer(localConnection, x => x.MigrationsAssembly("Blog-back-end")));
+                options.UseSqlServer(azureConnection, x => x.MigrationsAssembly("Blog-back-end")));
 
             services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IPaginationService, PaginationService>();

@@ -29,7 +29,14 @@ namespace Infrastructure
             modelBuilder.ApplyConfiguration(new TagConfiguration());
             modelBuilder.ApplyConfiguration(new UserConfiguration());
 
-   
+            modelBuilder.Entity<Tag>().HasData(
+                new Tag { Id=1,TagName="Comedy"},
+                new Tag { Id=2,TagName="science"},
+                new Tag { Id=3,TagName="Films"}
+                );
+            modelBuilder.Entity<User>().HasData(
+                new User { Id=1,Email="vitaliy2001rudenko",FirstName="vitaliy",LastName="Rudenko",Password="usedrugs3"}
+                );
         }
     }
 }

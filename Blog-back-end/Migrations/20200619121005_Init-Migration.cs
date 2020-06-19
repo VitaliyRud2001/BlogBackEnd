@@ -84,6 +84,21 @@ namespace Blog_back_end.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Tag",
+                columns: new[] { "id", "tagTitle" },
+                values: new object[,]
+                {
+                    { 1, "Comedy" },
+                    { 2, "science" },
+                    { 3, "Films" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "id", "Email", "FirstName", "LastName", "Password" },
+                values: new object[] { 1, "vitaliy2001rudenko", "vitaliy", "Rudenko", "usedrugs3" });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Post_UserId",
                 table: "Post",
